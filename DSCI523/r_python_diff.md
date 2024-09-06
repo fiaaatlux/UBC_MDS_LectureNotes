@@ -15,16 +15,6 @@ All are welcome to contribute, and all contributions will be attributed. If you 
 | `[` | `[[` | Used for subsetting and returns an object of the same type. However in Python this is only true for data frames. |
 | `typeof()` | `type()` | Function to determine the type of an object. |
 |  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
 
 **Contributors**
 
