@@ -38,14 +38,12 @@ df.head(3) # 展示前3行
 df.tail() # 没指定parameter所以展示后5行
 df.describe() # 返回basic stats, 仅对numeric类型的列生效
 df.shape # 返回行数和列数, 比如20行9列(20, 9)
+df.columns.to_list() # 返回list类型的列名
 ```
 
 **3. Access values from a DataFrame**
 
 ```py
-# 获取列名
-df.columns.to_list() # 返回list类型的列名
-
 # 选列
 df['region'] # 返回pandas series, 数据是region这一列
 
