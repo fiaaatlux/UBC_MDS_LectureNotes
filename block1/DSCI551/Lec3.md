@@ -66,6 +66,8 @@ $$
 P_X_H * P_X_H == joint_prob["H", "H"]
 ```
 
+*Note：如果两个事件是互相独立的，那么它们边缘概率相乘应该等于它们的联合概率*
+
 **4. 协方差 (Covariance) 和 Pearson 相关系数**
 
 - **协方差** 用于衡量两个数值型随机变量之间的依赖关系。协方差公式如下：
@@ -120,3 +122,36 @@ $$
 $$
 \text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X, Y)
 $$
+
+---
+
+**PS. 在R中的实践**
+
+```r
+library(dplyr)
+library(tidyverse)
+# 创建一个联合概率分布表
+df <- data.frame(
+    X = rep(0:2, each = 5),
+    Y = rep(0:4, times = 3),
+    Probability = c(0.10, 0.14, 0.08, 0.06, 0.02,
+                    0.12, 0.10, 0.07, 0.03, 0.03,
+                    0.08, 0.09, 0.05, 0.02, 0.01)
+  ) |>
+  pivot_wider(
+    names_from = Y,
+    values_from = Probability,
+    names_prefix = "Y = "
+  ) |>
+  as.data.frame()
+
+rownames(df) <- paste("X =", df$X)
+df$X <- NULL
+
+df$`P(X)` <- rowSums(df)
+df <- rbind(df, `P(Y)` = colSums(df))
+view(df)
+```
+
+
+

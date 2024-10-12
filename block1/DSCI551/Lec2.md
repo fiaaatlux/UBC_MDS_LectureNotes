@@ -42,7 +42,7 @@ $$
 
 **2. 随机变量变换**
 
-- **随机变量变换**：随机变量可以通过数学函数进行变换，如 \( Z = X^2 \)，即将螃蟹数量的平方作为新的随机变量 \(Z\)。对于变换后的随机变量，其概率分布会相应改变。
+- **随机变量变换**：随机变量可以通过数学函数进行变换，如 $Z = X^2$，即将螃蟹数量的平方作为新的随机变量 \(Z\)。对于变换后的随机变量，其概率分布会相应改变。
 
 - 变换后的概率质量函数 (PMF) 如下：
 
@@ -79,21 +79,21 @@ $$
 
 **4.1 伯努利分布 (Bernoulli Distribution)**
 
-- **定义**：只有两个可能结果的分布，记作 \(X \sim \text{Bernoulli}(p)\)，其中 \(p\) 是事件发生的概率。
-  
+- **定义**：只有两个可能结果的分布，记作 $X \sim \text{Bernoulli}(p)$，其中 \(p\) 是事件发生的概率。
+
 - **概率质量函数 (PMF)**：
 
 $$
 P(X = x \mid p) = p^x(1 - p)^{1-x}, \quad x = 0, 1
 $$
 
-- **均值**：\( E(X) = p \)
+- **均值**：$E(X) = p$
 
-- **方差**：\( \text{Var}(X) = p(1 - p) \)
+- **方差**：$\text{Var}(X) = p(1 - p)$
 
 **4.2 二项分布 (Binomial Distribution)**
 
-- **定义**：进行 \(n\) 次独立试验，每次试验成功的概率为 \(p\)，记作 \(X \sim \text{Binomial}(n, p)\)。
+- **定义**：进行 \(n\) 次独立试验，每次试验成功的概率为 \(p\)，记作 $X \sim \text{Binomial}(n, p)$。
 
 - **概率质量函数 (PMF)**：
 
@@ -101,13 +101,13 @@ $$
 P(X = x \mid n, p) = \binom{n}{x} p^x (1 - p)^{n-x}, \quad x = 0, 1, \dots, n
 $$
 
-- **均值**：\( E(X) = np \)
+- **均值**：$E(X) = np$
 
-- **方差**：\( \text{Var}(X) = np(1 - p) \)
+- **方差**：$\text{Var}(X) = np(1 - p)$
 
 **4.3 几何分布 (Geometric Distribution)**
 
-- **定义**：表示在首次成功前发生失败的次数，记作 \(X \sim \text{Geometric}(p)\)。
+- **定义**：表示在首次成功前发生失败的次数，记作 $X \sim \text{Geometric}(p)$。
 
 - **概率质量函数 (PMF)**：
 
@@ -115,13 +115,13 @@ $$
 P(X = x \mid p) = p(1 - p)^x, \quad x = 0, 1, \dots
 $$
 
-- **均值**：\( E(X) = \frac{1 - p}{p} \)
+- **均值**：$E(X) = \frac{1 - p}{p}$
 
-- **方差**：\( \text{Var}(X) = \frac{1 - p}{p^2} \)
+- **方差**：$\text{Var}(X) = \frac{1 - p}{p^2}$
 
 **4.4 泊松分布 (Poisson Distribution)**
 
-- **定义**：描述单位时间内事件发生的次数，记作 \(X \sim \text{Poisson}(\lambda)\)，其中 \(\lambda\) 是单位时间内的平均发生率。
+- **定义**：描述单位时间内事件发生的次数，记作 $X \sim \text{Poisson}(\lambda)$，其中 $\lambda$ 是单位时间内的平均发生率。
 
 - **概率质量函数 (PMF)**：
 
@@ -129,6 +129,6 @@ $$
 P(X = x \mid \lambda) = \frac{\lambda^x e^{-\lambda}}{x!}, \quad x = 0, 1, \dots
 $$
 
-- **均值**：\( E(X) = \lambda \)
+- **均值**：$E(X) = \lambda$
 
-- **方差**：\( \text{Var}(X) = \lambda \)
+- **方差**：$\text{Var}(X) = \lambda$
